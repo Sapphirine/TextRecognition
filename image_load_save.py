@@ -123,7 +123,7 @@ def batch_recover(batch_input, image_length=16, rows_in_single_image=64, recover
                                image_length=image_length,
                                name_index=i,
                                recover_path=recover_path)
-        if i==0:
+        if i == 0:
             out_image = recover
         else:
             out_image = np.vstack((out_image, recover))
@@ -133,7 +133,7 @@ def batch_recover(batch_input, image_length=16, rows_in_single_image=64, recover
 
 
 if __name__ == '__main__':
-    parse_data(800, 100, 100)
+    parse_data(200, 50, 50)
     rval = load_data()
     train_input, train_output = rval[0]
     valid_input, valid_output = rval[1]
